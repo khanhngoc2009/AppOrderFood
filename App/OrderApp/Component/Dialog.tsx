@@ -4,7 +4,7 @@ import {View,Text,TextInput,Button,StyleSheet} from 'react-native'
 function Dialog(){
     return(
         <View >
-
+          
         </View>
     )
 }
