@@ -2,34 +2,16 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { View, Text, TextInput, Button, StyleSheet, Image, TouchableOpacity } from 'react-native'
 import Images from '../../Image/index'
-function MenuProduct() {
-    
-    const type = [{
-        image: "",
-        name: "Coffe"
-    }, {
-        image: "",
-        name: "Trà sữa"
-    },
-    {
-        image: "",
-        name: "Hồng trà"
-    },
-    {
-        image: "",
-        name: "giải khát"
-    },
-    {
-        image: "",
-        name: "Đồ ăn vặt"
-    },
-    ]
+function MenuProduct({type}) {
     return (
         <View style={styles.container}>
-            <Image source={Images.ProductCoffe} style={styles.imageSty} />
-            <View style={styles.textSty}>
-                <Text style={{position:"absolute"}}>Coffe</Text>
-            </View>
+            <TouchableOpacity
+                style={styles.appButtonContainer}>
+                <Image source={Images.ProductCoffe} style={styles.imageSty} />
+                <View style={styles.textSty}>
+                    <Text style={styles.textStyType}>{type}</Text>
+                </View>
+            </TouchableOpacity>
         </View>
     )
 }
@@ -49,25 +31,31 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: '#fff',
         width: 100,
-        height: 100,
-        margin: 12,
+        height: 40,
+        margin: 5,
         marginTop: 20,
         borderRadius: 20,
         shadowColor: '#000',
         shadowOffset: { width: 0, height: 1 },
         shadowOpacity: 0.8,
         shadowRadius: 0.5,
-        elevation: 5
+        elevation: 5,
     },
     imageSty: {
-        width: 40,
-        height: 40,
-        borderRadius: 30,
+        width: 30,
+        height: 30,
+        borderRadius: 20,
+        margin: 5
     },
-    textSty:{
-        color:"black",
-        fontSize: 25,
-        
+    textSty: {
+        color: "black",
+        position: "absolute",
+        marginLeft: 40,
+        marginTop: 12
+    },
+    textStyType: {
+        color: "red",
+        fontSize: 12,
     }
 });
 

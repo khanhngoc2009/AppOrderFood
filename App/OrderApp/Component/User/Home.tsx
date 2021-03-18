@@ -6,6 +6,26 @@ import MenuProduct from '../Product/MenuProduct'
 import Product from '../Product/Product'
 function Home({ navigation: { navigate } }) {
   const [text, setText] = React.useState('')
+  const type = [{
+    image: "",
+    name: "Coffe"
+  }, {
+    image: "",
+    name: "Trà sữa"
+  },
+  {
+    image: "",
+    name: "Hồng trà"
+  },
+  {
+    image: "",
+    name: "giải khát"
+  },
+  {
+    image: "",
+    name: "Đồ ăn vặt"
+  },
+  ]
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -19,13 +39,25 @@ function Home({ navigation: { navigate } }) {
           defaultValue={text}
         />
       </View>
-
-      <View >
-        <ScrollView horizontal={true}>
-          <MenuProduct />
+      <View style={{
+        width: "100%", height: 80, marginTop: 130,
+        position: 'absolute',
+      }}>
+        <ScrollView horizontal={true}
+          showsVerticalScrollIndicator={false}
+          showsHorizontalScrollIndicator={false}>
+            <MenuProduct type="ALL"/>
+          {type.map(function (value, index) {
+            return (
+              <View key={index}>
+                <MenuProduct type={value.name} />
+              </View>
+            )
+          })}
         </ScrollView>
       </View>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}
+        showsHorizontalScrollIndicator={false}>
         <View style={styles.mainSty}>
           <Product />
         </View>
@@ -33,7 +65,7 @@ function Home({ navigation: { navigate } }) {
 
 
       {/* Menu của trang chủ*/}
-      
+
       <View style={styles.menuSty}>
 
       </View>

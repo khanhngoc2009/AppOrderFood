@@ -14,14 +14,13 @@ export default function App() {
     // <StoreProvider >
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Dialog">
-          {/* <Stack.Screen name="Dialog" component={Dialog} /> */}
+          <Stack.Screen name="Dialog" component={Dialog} />
           <Stack.Screen name="Home" component={Home} />
         </Stack.Navigator>
       </NavigationContainer>
     // </StoreProvider>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,

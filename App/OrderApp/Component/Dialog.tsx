@@ -11,10 +11,15 @@ function Dialog({ navigation }) {
         <Text style={styles.textCenter}>Nơi thường thức chất lượng cuộc sống</Text>
       </View>
       <View style={styles.buttonSty}>
-        <TouchableOpacity 
-        onPress={() => navigation.navigate('Home')}
-         style={styles.appButtonContainer}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('Home')}
+          style={styles.appButtonContainer}>
           <Text style={styles.appButtonText}>Get Start</Text>
+        </TouchableOpacity>
+      </View>
+      <View style={{marginTop: 20}}>
+        <TouchableOpacity>
+          <Text style={{color:"red",fontSize:20}}>. . .</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -26,7 +31,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-    width: "100%",
   },
   imageCenter: {
     width: 160,
@@ -48,7 +52,7 @@ const styles = StyleSheet.create({
     fontWeight: "100",
     fontFamily: "fantasy ",
     color: "#800",
-  },appButtonContainer: {
+  }, appButtonContainer: {
     elevation: 8,
     backgroundColor: "#F00808",
     borderRadius: 10,
@@ -60,7 +64,7 @@ const styles = StyleSheet.create({
     color: "#fff",
     alignSelf: "center",
     textTransform: "uppercase"
-  }
+  },
 });
 
 export default Dialog;
