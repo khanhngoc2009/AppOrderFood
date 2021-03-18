@@ -30,6 +30,10 @@ function Home({ navigation: { navigate } }) {
           <Product />
         </View>
       </ScrollView>
+
+
+      {/* Menu của trang chủ*/}
+      
       <View style={styles.menuSty}>
 
       </View>

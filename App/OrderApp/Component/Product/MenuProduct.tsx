@@ -28,7 +28,7 @@ function MenuProduct() {
         <View style={styles.container}>
             <Image source={Images.ProductCoffe} style={styles.imageSty} />
             <View style={styles.textSty}>
-                <Text>Coffe</Text>
+                <Text style={{position:"absolute"}}>Coffe</Text>
             </View>
         </View>
     )
@@ -66,7 +66,8 @@ const styles = StyleSheet.create({
     },
     textSty:{
         color:"black",
-        fontSize: 25
+        fontSize: 25,
+        
     }
 });
 
