@@ -142,13 +142,14 @@ const styles = StyleSheet.create({
     marginTop:17
 
   }, viewInput: {
+    width:"100%",
     marginTop: 10,
     position: 'absolute',
     padding: 2
   }
   , input: {
     margin: 2,
-    width: 400,
+    width: "98%",
     height: 40,
     borderColor: '#fff',
     borderWidth: 0.6,
