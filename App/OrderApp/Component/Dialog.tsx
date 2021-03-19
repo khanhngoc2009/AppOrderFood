@@ -7,7 +7,7 @@ function Dialog({ navigation }) {
     <View style={styles.container}>
       <View style={{ alignItems: 'center', }}>
         <Image source={Images.CoffeDialog} style={styles.imageCenter} />
-        <Text style={styles.textHeader}>Top #1 Coffe </Text>
+        <Text style={styles.textHeader}><Text style={{color:"#F00808",fontSize:23,fontWeight:"normal"}}>Z~ Coffe</Text> Top #1 Coffe </Text>
         <Text style={styles.textCenter}>Nơi thường thức chất lượng cuộc sống</Text>
       </View>
       <View style={styles.buttonSty}>
@@ -42,10 +42,10 @@ const styles = StyleSheet.create({
     height: 50
   },
   textHeader: {
-    fontSize: 23,
+    fontSize: 20,
     fontFamily: "fantasy ", fontWeight: "bold",
 
-    color: "#F00808",
+    color: "#800",
   },
   textCenter: {
     fontSize: 15,

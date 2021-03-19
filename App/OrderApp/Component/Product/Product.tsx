@@ -7,7 +7,7 @@ function Product() {
         name: "Capuchino Coffe",
         detail: "no",
         price: 120,
-        type:"Coffe",
+        type: "Coffe",
         Vote: 4,
         like: false,
     }
@@ -25,14 +25,15 @@ function Product() {
                     {product.type}
                 </Text>
                 <Text style={styles.textStyPrice}>
-                    ${product.price}.000 
+                    ${product.price}.000
                 </Text>
-                
+
             </View>
-            <View style={{marginLeft: "85%",marginTop:-40,width:40,height:40}}>
-                <Button title="+" 
-                color="red"
-                />
+            <View style={{ marginLeft: "85%", marginTop: -40, width: 40, height: 40 }}>
+                <TouchableOpacity
+                    style={{borderRadius:10,width:35,height:35,backgroundColor: "#F00808",}}>
+                    <Text style={{fontSize:22,color:"#fff",marginLeft:12,marginTop:2}}>+</Text>
+                </TouchableOpacity>
             </View>
         </View>
     )
@@ -52,7 +53,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#fff',
-        width: "95%",
+        width: 400,
         height: 120,
         margin: 12,
         marginTop: 20,
@@ -68,7 +69,7 @@ const styles = StyleSheet.create({
         height: 90,
         borderRadius: 30,
         margin: 13,
-        
+
     },
     textSty: {
         position: 'absolute',
@@ -94,11 +95,11 @@ const styles = StyleSheet.create({
         color: "gray",
         fontSize: 15,
         fontFamily: "sans-serif",
-    },textStyPrice: {
+    }, textStyPrice: {
         color: "black",
         fontSize: 15,
         fontFamily: "math",
-        fontWeight:"bold"
+        fontWeight: "bold"
     }
 });
 
