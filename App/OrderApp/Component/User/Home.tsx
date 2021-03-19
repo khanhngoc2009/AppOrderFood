@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, TextInput, Button, StyleSheet, ScrollView, Image } from 'react-native'
+import { View, Text, TextInput, Button, StyleSheet, ScrollView, Image, TouchableOpacity } from 'react-native'
 import { BackgroundTimer } from 'react-native-background-timer'
 import Images from '../../Image/index'
 import MenuProduct from '../Product/MenuProduct'
@@ -47,7 +47,7 @@ function Home({ navigation: { navigate } }) {
           <View style={{ width: "98%", height: 200 }}>
             <Text style={styles.titleStyText}>All</Text>
             <ScrollView showsVerticalScrollIndicator={false}
-            horizontal={true}
+              horizontal={true}
               showsHorizontalScrollIndicator={false}
             >
               {type.map(function (value, index) {
@@ -113,6 +113,18 @@ function Home({ navigation: { navigate } }) {
       {/* Menu của trang chủ*/}
 
       <View style={styles.menuSty}>
+          {/* <TouchableOpacity style={styles.btmenu}>
+            <Text>1</Text>
+          </TouchableOpacity> */}
+          <TouchableOpacity style={styles.btmenu}>
+            <Text>2</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.btmenu}>
+            <Text>3</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.btmenu}>
+            <Text>4</Text>
+          </TouchableOpacity>
       </View>
     </View>
   )
@@ -130,7 +142,8 @@ const styles = StyleSheet.create({
   menuSty: {
     width: "100%",
     height: 40,
-    backgroundColor: "#900",
+    backgroundColor: "#ff5f38",
+
     alignSelf: 'flex-end',
     bottom: 0,
     position: 'absolute',
@@ -162,7 +175,14 @@ const styles = StyleSheet.create({
   setPositionMenuFilter: {
     width: "100%", height: 80, marginTop: 155,
     position: 'absolute',
+  },
+  btmenu:{
+    width: "25%",
+    height: "100%",
+    backgroundColor: "#FFFFFF",
+ 
   }
+
 });
 
 export default Home;
