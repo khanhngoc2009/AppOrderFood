@@ -6,7 +6,7 @@ import MenuProduct from '../Product/MenuProduct'
 import Product from '../Product/Product'
 function Home({ navigation: { navigate } }) {
   const [text, setText] = React.useState('')
-  
+
   const type = [{
     image: "",
     name: "Coffe"
@@ -31,7 +31,7 @@ function Home({ navigation: { navigate } }) {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Image source={Images.BackGroundMain} style={{ width: "100%", height: 300 }} />
+        <Image source={Images.BackGroundMain} style={{ width: "100%", height: 160,borderBottomLeftRadius: 120,}} />
       </View>
       <View style={styles.viewInput}>
         <TextInput style={styles.input}
@@ -53,7 +53,7 @@ function Home({ navigation: { navigate } }) {
               {type.map(function (value, index) {
                 return (
                   <View key={index}>
-                    <Product />
+                    <Product navigate={navigate}/>
                   </View>
                 )
               })}
@@ -73,7 +73,7 @@ function Home({ navigation: { navigate } }) {
               {type.map(function (value, index) {
                 return (
                   <View key={index}>
-                    <Product />
+                    <Product navigate={navigate}/>
                   </View>
                 )
               })}
@@ -87,7 +87,7 @@ function Home({ navigation: { navigate } }) {
               {type.map(function (value, index) {
                 return (
                   <View key={index}>
-                    <Product />
+                    <Product navigate={navigate}/>
                   </View>
                 )
               })}
@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
   },
   header: {
     width: "100%",
-    height: 180,
+    height: 200,
     backgroundColor: "#fff",
   },
   menuSty: {
@@ -137,8 +137,9 @@ const styles = StyleSheet.create({
   },
   mainSty: {
     width: "100%",
-    height: 490,
+    height: 410,
     backgroundColor: "#fff",
+    marginTop:17
 
   }, viewInput: {
     marginTop: 10,
@@ -149,16 +150,16 @@ const styles = StyleSheet.create({
     margin: 2,
     width: 400,
     height: 40,
-    borderColor: 'red',
+    borderColor: '#fff',
     borderWidth: 0.6,
     borderRadius: 10,
-    color: "#900",
+    color: "#fff",
   },
   titleStyText: {
     color: "red", marginTop: 12, marginLeft: 12, fontWeight: "bold", fontFamily: "normal", fontSize: 16
   },
   setPositionMenuFilter: {
-    width: "100%", height: 80, marginTop: 110,
+    width: "100%", height: 80, marginTop: 155,
     position: 'absolute',
   }
 });
