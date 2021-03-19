@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { View, Text, TextInput, Button, StyleSheet, Image, TouchableOpacity } from 'react-native'
 import Images from '../../Image/index'
-function MenuProduct({type}) {
+function MenuProduct({type}){
     return (
         <View style={styles.container}>
             <TouchableOpacity
