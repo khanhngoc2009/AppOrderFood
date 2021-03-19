@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { View, Text, TextInput, Button, StyleSheet, Image, TouchableOpacity } from 'react-native'
 import Images from '../../Image/index'
-function Product() {
+function Product({navigate}) {
     const product = {
         name: "Capuchino Coffe",
         detail: "no",
@@ -31,6 +31,7 @@ function Product() {
             </View>
             <View style={{ marginLeft: "85%", marginTop: -40, width: 40, height: 40 }}>
                 <TouchableOpacity
+                onPress={()=>navigate("DetailProduct")}
                     style={{borderRadius:10,width:35,height:35,backgroundColor: "#F00808",}}>
                     <Text style={{fontSize:22,color:"#fff",marginLeft:12,marginTop:2}}>+</Text>
                 </TouchableOpacity>
@@ -53,7 +54,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#fff',
-        width: 400,
+        width: 380,
         height: 120,
         margin: 12,
         marginTop: 20,

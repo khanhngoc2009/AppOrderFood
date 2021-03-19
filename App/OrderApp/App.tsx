@@ -6,6 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { Provider as StoreProvider } from 'react-redux'
 import Dialog from './Component/Dialog'
 import Home from './Component/User/Home'
+import DetailProduct from './Component/Product/DetailProduct';
 
 const Stack=createStackNavigator();
 
@@ -16,6 +17,7 @@ export default function App() {
         <Stack.Navigator initialRouteName="Dialog">
           <Stack.Screen name="Dialog" component={Dialog} />
           <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="DetailProduct" component={DetailProduct}/>
         </Stack.Navigator>
       </NavigationContainer>
     // </StoreProvider>
