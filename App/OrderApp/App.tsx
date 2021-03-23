@@ -4,9 +4,9 @@ import { StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Provider as StoreProvider } from 'react-redux'
-import Dialog from './Component/Dialog'
-import Home from './Component/User/Home'
-import DetailProduct from './Component/Product/DetailProduct';
+import Dialog from './src/Screens/Dialog'
+import Home from './src/Screens/User/Home'
+import DetailProduct from './src/Screens/Product/DetailProduct';
 
 const Stack=createStackNavigator();
 

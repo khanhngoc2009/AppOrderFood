@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
-import Images from '../../Image';
+import Images from '../../Image/index';
 function DetailProduct() {
     const product = {
         name: "Capuchino Coffe",
